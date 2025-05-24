@@ -10,13 +10,13 @@ public class AvengersFrmGUI {
     private JButton listarAvengersButton;
     private JButton calcularAporteButton;
 
-    private ListaAvengers listaAvengers = new ListaAvengers(); // instancia compartida
+    private ListaAvengers listaAvengers = new ListaAvengers(); // instanciamos la lista que se va a usar para todos los forms
 
     public AvengersFrmGUI() {
         agregarAvengerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                CrearAvenger crearAvengerForm = new CrearAvenger(listaAvengers);
+                CrearAvenger crearAvengerForm = new CrearAvenger(listaAvengers); //Mandamos la listaAvengers como parametro para mantener los datos
                 JFrame frame = new JFrame("Crear Avenger");
                 frame.setContentPane(crearAvengerForm.getMainPanel());
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -29,7 +29,7 @@ public class AvengersFrmGUI {
         listarAvengersButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ListarAvengers listarAvengersForm = new ListarAvengers(listaAvengers);
+                ListarAvengers listarAvengersForm = new ListarAvengers(listaAvengers); //Mandamos la listaAvengers como parametro para mantener los datos
                 JFrame frame = new JFrame("Listar Avengers");
                 frame.setContentPane(listarAvengersForm.getMainPanel());
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
