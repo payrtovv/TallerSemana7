@@ -1,12 +1,12 @@
 public class Avenger {
-    private int ID;
+    private String ID;
     private String nombre;
     private Mision misionAsignada;
     private double pagoMensual;
     private double aporte;
     private double impuesto;
 
-    public Avenger(int ID, String nombre, Mision misionAsignada, double pagoMensual) {
+    public Avenger(String ID, String nombre, Mision misionAsignada, double pagoMensual) {
         this.ID = ID;
         this.nombre = nombre;
         this.misionAsignada = misionAsignada;
@@ -34,10 +34,10 @@ public class Avenger {
     @Override
     public String toString() {
         return
-                "PagoMensual= " + pagoMensual+ "\n" +
-                " MisionAsignada= " + misionAsignada.getDescripcion() + "\n" +
-                " Peligrosidad= " + misionAsignada.getNivelPeligrosidad() + "\n" +
-                " Nombre=" + nombre + "\n" +
-                " ID=" + ID;
+                "ID=" + ID + "\n" +
+                "Nombre=" + nombre + "\n" +
+                "MisionAsignada= " + misionAsignada.getDescripcion() + "\n" +
+                "Peligrosidad= " + misionAsignada.getNivelPeligrosidad() + "\n" +
+                "PagoMensual= " + pagoMensual+ "\n";
     }
 }

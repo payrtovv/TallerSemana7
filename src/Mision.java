@@ -1,8 +1,8 @@
 public class Mision {
     private String descripcion;
-    private int nivelPeligrosidad;
+    private String nivelPeligrosidad;
 
-    public Mision(String descripcion, int nivelPeligrosidad) {
+    public Mision(String descripcion, String nivelPeligrosidad) {
         this.descripcion = descripcion;
         this.nivelPeligrosidad = nivelPeligrosidad;
     }
@@ -11,7 +11,7 @@ public class Mision {
         return descripcion;
     }
 
-    public int getNivelPeligrosidad() {
+    public String getNivelPeligrosidad() {
         return nivelPeligrosidad;
     }
 }
