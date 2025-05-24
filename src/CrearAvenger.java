@@ -12,6 +12,7 @@ public class CrearAvenger {
     private JButton registrarButton;
     private JLabel Lable2;
     private JLabel Label3;
+    private JComboBox comboBox1;
 
 
     private ListaAvengers lista; //Creamos una lista para guardar la informacion que vamos a llamar mas adelante
@@ -26,7 +27,7 @@ public class CrearAvenger {
                     //Guardamos los valores que ingreso el usuario a variables
                     String nombre = NombreTxt.getText();
                     String mision = MisionTxt.getText();
-                    String peligrosidad = PeligrosidadTxt.getText();
+                    String peligrosidad = comboBox1.getSelectedItem().toString();
                     double pago = Double.parseDouble(PagoTxt.getText()); //En esta linea convertimos de String a Double
 
                     String ID = Avenger.generarIdUnico(lista);//Usamos la funcion generaridUnico para crear un id
@@ -37,7 +38,7 @@ public class CrearAvenger {
                     //Usamos setText para vacias los campos de texto
                     NombreTxt.setText("");
                     MisionTxt.setText("");
-                    PeligrosidadTxt.setText("");
+                    comboBox1.setSelectedIndex(0);
                     PagoTxt.setText("");
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "Error al registrar el Avenger"); //Mostramos que hubo un error si lo hay
